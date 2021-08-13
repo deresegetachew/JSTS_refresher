@@ -42,6 +42,12 @@ const result1 = await pause(1);
 const result2 = await pause(result1);
 console.log(result2);
 }
+async function f1() {
+   console.log('sss');
+   await sequentialAwait();
+   console.log('yyy')
+}
+f1();
 
 sequentialAwait();
 

@@ -1,30 +1,34 @@
 //Generic function
-function joinStringOrNumbers<T>(... data: T[]): string {
+function joinStringOrNumbers<T extends string >(... data: T[]): string {
     return data.join('-');
 }
 
-console.log(joinStringOrNumbers<number>(1,2,3));
+console.log(joinStringOrNumbers<boolean>();
 
 
 // Generic Class : 
 
 class Stringify<T> {
+    x:T
     add(a:T,b:T):string {
         return `${a} - ${b}`;
     }
 }
 
-let _stringify = new Stringify<number>();
-console.log(_stringify.add(1,2));
+let _stringify = new Stringify<boolean>();
+console.log(_stringify.add(1,2);
+_stringify.x
 
 
 // Generics of more than one type
 
+
 function concat<T,Y>(a:T,b:Y): string[] {
+
     return [`${a}`,`${b}`]
 }
 
-console.log(concat(1,'a'))
+console.log(concat<number,string>(1,'a'))
 
 // constrained generic function
 

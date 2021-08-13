@@ -39,10 +39,10 @@ function stringify456(num: number): string {
 }
 
 console.log(stringify456(456));
-
+(num: number) => string
 //fix this function.
 function funcGG(): void {
-    return 'a';
+    return undefined;
 }
 
 // function with optional parameter
@@ -51,14 +51,17 @@ function funcABB(ab?:string): string {
     return ab || '';
 }
 
-console.log(funcABB('ab'));
+console.log(funcABB());
 
 
 // Rest Parameters
 
 function joinNumbers(...nums: number[]): string {
+    console.log(nums.length);
     return nums.join('-');
   }
+
+
 
   console.log(joinNumbers(1,2,3,4));
 

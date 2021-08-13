@@ -9,6 +9,7 @@ interface Point {
 let p: Point ;
 
 
+
 type TPoint = {
     x: number,
     y: number
